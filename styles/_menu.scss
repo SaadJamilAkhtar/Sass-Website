@@ -96,6 +96,25 @@
             }
         }
 
+        &__link {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+            @include transitionEase;
+
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+
     }
 
+}
+
+@for $i from 1 through 4 {
+    .menu-nav__item:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
 }
